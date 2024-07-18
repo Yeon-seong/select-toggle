@@ -1,0 +1,80 @@
+/* 직접 셀렉트 박스 만들기 */
+h2 {
+  margin: 30px;
+}
+
+.cont_select {
+  position: relative;
+  width: 200px;
+}
+
+/* 나의 최애 프로그래밍 언어 버튼 */
+.btn_select {
+  width: 100%;
+  padding: 13px 14px;
+  color: #000;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  cursor: pointer;
+  background: url("../images/icon-Triangle-down.png") right 13px center no-repeat;
+
+/* 말줄임 추가 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.btn_select:focus {
+  outline: 3px solid #F8E4FF;
+}
+
+/* 이미 보이는 상태에서는 ul요소 안보이게하기 */
+.list_member {
+  display: none;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 51px;
+  background: #FFF;
+  border: 1px solid #C4C4C4;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.btn_select.on {
+  background: url("../images/icon-Triangle-up.png") right 13px center no-repeat;
+}
+
+.btn_select.on+.list_member {
+  display: block;
+}
+
+.list_member li {
+  height: 40px;
+  padding: 5px 18px;
+}
+
+.list_member li button {
+  display: block;
+  height: 30px;
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+
+/* 말줄임 추가 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.list_member li button:focus,
+.list_member li button:hover {
+  background-color: #F8E4FF;
+}
